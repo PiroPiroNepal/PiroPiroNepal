@@ -1,0 +1,138 @@
+/* Base Styles (Default for PC) */
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0;
+  background-color: #F3F4E7;
+}
+
+.products {
+  padding: 20px 0;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.prod-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-item {
+  flex: 0 0 calc(33.33% - 20px); /* Each item takes up roughly 33% of the container width */
+  margin: 10px; /* Adjust margin between items */
+  text-align: center;
+  background-color: #F3F4E7; /* White background for better contrast */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-item p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.content h2 {
+  white-space: nowrap;
+  display: inline-block;
+  animation: slide 0.5s linear forwards;
+  font-size: 48px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  font-weight: 700;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px 5px; /* Adjust padding for mobile */
+  }
+
+  .product-item {
+    flex: 1 0 100%; /* Each item takes up 100% of the container width */
+    margin: 10px 0; /* Vertical margin between items */
+    text-align: left; /* Left-align text */
+  }
+
+  .prod-img {
+    width: 100%; /* Make the image take full width */
+    max-width: none; /* Remove max-width constraint */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and description */
+  }
+
+  .product-item h3 {
+    font-size: 20px; /* Slightly larger font size for headings */
+  }
+
+  .product-item p {
+    font-size: 16px; /* Adjust font size for descriptions */
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(20px);
+    }
+    to {
+      transform: translateX(40px);
+    }
+  }
+  /* Adjust font size of "Organic Selection" */
+  .content h2 {
+    font-size: 32px; /* Reduced font size for mobile */
+  }
+
+  /* No extra text insertion for mobile, use existing header */
+  .products::before {
+    content: ""; /* Clear any inserted text */
+    display: none; /* Hide pseudo-element */
+  }
+}
+
+/* Media Query for Desktop Devices */
+@media (min-width: 769px) {
+  .gallery {
+    display: flex; /* Ensure flex layout for larger screens */
+    flex-direction: row; /* Row layout */
+  }
+
+  .product-item {
+    flex: 0 0 calc(33.33% - 20px); /* Restore multi-column layout for desktop */
+    text-align: center; /* Center text */
+  }
+
+  .prod-img {
+    max-width: 350px; /* Ensure image size is appropriate for larger screens */
+    margin-bottom: 0; /* Remove bottom margin for desktop */
+  }
+}

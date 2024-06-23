@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #F3F4E7;
+  }
+  @keyframes slide {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(30px);
+        opacity: 1;
+    }
+}
+
+.animation{
+    white-space: nowrap;
+    display: inline-block;
+    animation: slide 0.5s linear forwards;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    font-weight: 700;
+    color: #2a4c33;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #F3F4E7;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 22%;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+
+.card-header {
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.address {
+    background-color: #B1C0AE;
+}
+
+.Instagram {
+    background-color: #EFE3B8;
+}
+
+.phone {
+    background-color: #B1D8B7;
+}
+
+.email {
+    background-color: #ff6b6b;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+p {
+    color: #666;
+    font-size: 1em;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .subtitle {
+        font-size: 1em; /* Decrease font size for subtitle */
+        margin-bottom: 20px; /* Adjust margin for spacing */
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column; /* Arrange cards in a column */
+        align-items: center; /* Center align items horizontally */
+    }
+
+    .card {
+        width: 80%; /* Take up 80% of the container width */
+        height: auto; /* Adjust height automatically based on content */
+        margin: 10px 0; /* Adjust margin for spacing between cards */
+        padding: 15px; /* Add padding inside cards */
+        position: relative; /* Maintain relative position for pseudo-element */
+    }
+
+    .card::before {
+        content: '';
+        width: 5px; /* Width for the stripe */
+        height: 100%; /* Full height of the card */
+        position: absolute; /* Positioning relative to the card */
+        top: 0;
+        left: 0;
+    }
+
+    .address::before {
+        background-color: #B1C0AE; /* Adjust strip color for address card */
+    }
+
+    .Instagram::before {
+        background-color: #EFE3B8; /* Adjust strip color for Instagram card */
+    }
+
+    .phone::before {
+        background-color: #B1D8B7; /* Adjust strip color for phone card */
+    }
+
+    .email::before {
+        background-color: #ff6b6b; /* Adjust strip color for email card */
+    }
+
+    .card-header {
+        display: inline-block; /* Ensure stripe takes up full height */
+        width: 5px; /* Ensure stripe width */
+        height: 100%; /* Full height for stripe */
+        position: absolute; /* Absolute positioning */
+        top: 0;
+        left: 0;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Ensure consistent heading size */
+        margin-bottom: 10px; /* Adjust margin below heading */
+    }
+
+    p {
+        color: #666; /* Adjust text color */
+        font-size: 1em; /* Ensure consistent font size */
+    }
+    .subtitle {
+        padding-right: 30px;
+        white-space: normal; /* Allow wrapping on smaller screens */
+    }
+}

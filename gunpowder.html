@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunpowder</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="gunpowder.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="left">
+                <a class="heading-logo" href="#">PIROPIRO NEPAL</a>
+            </div>
+            <!-- Hamburger menu icon for mobile -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
+            </ul>
+        </nav>
+        <!-- Dropdown menu for mobile -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
+            </ul>
+        </div>
+    </header>
+    
+      <div class="intro">
+        <h1><b>PIROPIRO <br> NEPAL</b></h1>
+      </div>
+      <div class="product-section">
+        <div class="product-details">
+            <h1>Gunpowder Seasoning</h1>
+            <p class="product-tagline">A fiery blend of spices.</p>
+            <p class="product-info">100% NATURAL</p>
+            <h2>Price Rs-299</h2>
+        </div>
+        <div class="product-image">
+            <img src="1.png" alt="Product Image">
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
